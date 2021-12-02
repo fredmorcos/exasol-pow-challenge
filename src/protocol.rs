@@ -1,6 +1,7 @@
 #![warn(clippy::all)]
 
 use crate::error::Err;
+use crate::pow::pow;
 use crate::ssl::create_ssl_stream;
 use crate::Res;
 use log::debug;
@@ -83,7 +84,7 @@ impl Exasol<StatePow> {
 
     let authdata = args.next().ok_or(Err::MissingArg)?;
     let difficulty = {
-      let val = args.next().ok_or(Err::MissingArg)?.parse::<u8>()?;
+      let val = args.next().ok_or(Err::MissingArg)?.parse::<usize>()?;
       if val > 9 {
         return Err::invalid_difficulty(val);
       }
@@ -91,6 +92,8 @@ impl Exasol<StatePow> {
     };
 
     debug!("Authdata = {}  |  Difficulty = {}", authdata, difficulty);
+
+    let random_string = pow(authdata, difficulty)?;
 
     todo!()
   }

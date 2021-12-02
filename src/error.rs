@@ -16,7 +16,7 @@ pub enum Err {
   #[display(fmt = "Missing argument")]
   MissingArg,
   #[display(fmt = "Invalid difficulty `{}`", _0)]
-  InvalidDifficulty(u8),
+  InvalidDifficulty(usize),
 }
 
 impl Err {
@@ -28,7 +28,7 @@ impl Err {
     Err(Box::new(Err::UnknownUnexpectedCommand(command.to_string(), expected.to_string())))
   }
 
-  pub(crate) fn invalid_difficulty<T>(difficulty: u8) -> Res<T> {
+  pub(crate) fn invalid_difficulty<T>(difficulty: usize) -> Res<T> {
     Err(Box::new(Err::InvalidDifficulty(difficulty)))
   }
 }
