@@ -4,10 +4,11 @@ use std::error::Error;
 
 pub type Res<T> = Result<T, Box<dyn Error>>;
 
-pub mod ssl;
 mod io;
+mod ssl;
 
 pub mod error;
+pub mod protocol;
 pub mod userdata;
 
 pub use error::Err as ExasolErr;
