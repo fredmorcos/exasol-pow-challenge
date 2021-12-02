@@ -1,0 +1,1 @@
+# `exasol`: Exasol Coding Challenge

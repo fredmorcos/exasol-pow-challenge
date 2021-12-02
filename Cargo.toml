@@ -1,0 +1,30 @@
+[package]
+name = "exasol"
+version = "0.1.0"
+edition = "2021"
+description = "Exasol coding challenge"
+authors = ["Fred Morcos <fm@fredmorcos.com>"]
+license = "GPL-3.0-only"
+# homepage = "https://github.com/fredmorcos/exasol"
+# repository = "https://github.com/fredmorcos/exasol"
+readme = "README.md"
+keywords = ["exasol", "pow", "challenge", "hash", "random-string"]
+categories = ["authentication", "command-line-utilities", "cryptography", "cryptography::cryptocurrencies", "network-programming"]
+
+[lib]
+name = "exasol"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exasol"
+path = "src/main.rs"
+
+[dependencies]
+env_logger = "0.8"
+log = "0.4"
+structopt = "0.3"
+derive_more = "0.99"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+humantime = "2.1"
+openssl = "0.10"
