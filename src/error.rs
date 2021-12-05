@@ -19,6 +19,14 @@ pub enum Err {
   InvalidDifficulty(usize),
   #[display(fmt = "Could not find a random string")]
   CannotPow,
+  #[display(fmt = "Server must first request MAILNUM")]
+  NoMailNum,
+  #[display(fmt = "Server must first request ADDRNUM")]
+  NoAddrNum,
+  #[display(fmt = "Invalid mail index `{}` request", _0)]
+  InvalidMailIndex(usize),
+  #[display(fmt = "Invalid address line index `{}` request", _0)]
+  InvalidAddressIndex(usize),
 }
 
 impl Err {
@@ -32,6 +40,22 @@ impl Err {
 
   pub(crate) fn invalid_difficulty<T>(difficulty: usize) -> Res<T> {
     Err(Box::new(Err::InvalidDifficulty(difficulty)))
+  }
+
+  pub(crate) fn no_mailnum<T>() -> Res<T> {
+    Err(Box::new(Err::NoMailNum))
+  }
+
+  pub(crate) fn no_addrnum<T>() -> Res<T> {
+    Err(Box::new(Err::NoAddrNum))
+  }
+
+  pub(crate) fn invalid_mail_index<T>(index: usize) -> Res<T> {
+    Err(Box::new(Err::InvalidMailIndex(index)))
+  }
+
+  pub(crate) fn invalid_address_index<T>(index: usize) -> Res<T> {
+    Err(Box::new(Err::InvalidAddressIndex(index)))
   }
 }
 

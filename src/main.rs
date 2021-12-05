@@ -31,10 +31,14 @@ struct Opt {
 }
 
 fn run(opt: &Opt) -> Res<()> {
-  let user_data = UserData::new(&opt.data_file)?;
+  const ADDRESS: &str = "18.202.148.130:3336";
+  let userdata = UserData::new(&opt.data_file)?;
 
-  let protocol = Exasol::new(&opt.cert_file, opt.keylog_file.as_deref(), "18.202.148.130:3336")?;
-  let protocol = protocol.connect()?.handshake()?.pow()?;
+  let _protocol = Exasol::new(&opt.cert_file, opt.keylog_file.as_deref(), ADDRESS)?
+    .connect()?
+    .handshake()?
+    .pow()?
+    .submit(&userdata)?;
 
   Ok(())
 }

@@ -213,7 +213,7 @@ pub(crate) fn pow(authdata: &str, difficulty: usize) -> Res<Option<Vec<u8>>> {
 
           // Re-seed with a CSRNG every Y iterations to search a different area in the
           // search space.
-          if iterations % 100_000_000 == 0 {
+          if iterations % 1_000_000_000 == 0 {
             info!("Thread {}: Reseeding", thread_idx);
             rng = create_rng(thread_idx);
           }
