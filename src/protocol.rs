@@ -93,8 +93,15 @@ impl Exasol<StatePow> {
 
     debug!("Authdata = {}  |  Difficulty = {}", authdata, difficulty);
 
-    let random_string = pow(authdata, difficulty)?;
+    let random_bytes = pow(authdata, difficulty)?.ok_or(Err::CannotPow)?;
+    let random_string = std::str::from_utf8(&random_bytes)?;
 
-    todo!()
+    assert!(!random_bytes.is_empty());
+
+    self.stream.write_all(random_string.as_bytes())?;
+    self.stream.write_all(b"\n")?;
+    self.stream.flush()?;
+
+    Ok(Exasol::make(self))
   }
 }

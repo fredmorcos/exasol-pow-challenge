@@ -17,6 +17,8 @@ pub enum Err {
   MissingArg,
   #[display(fmt = "Invalid difficulty `{}`", _0)]
   InvalidDifficulty(usize),
+  #[display(fmt = "Could not find a random string")]
+  CannotPow,
 }
 
 impl Err {
