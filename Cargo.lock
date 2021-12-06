@@ -194,7 +194,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "exasol"
+name = "exasol-pow-challenge"
 version = "0.1.0"
 dependencies = [
  "chrono",

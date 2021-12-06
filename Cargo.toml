@@ -1,12 +1,12 @@
 [package]
-name = "exasol"
+name = "exasol-pow-challenge"
 version = "0.1.0"
 edition = "2021"
-description = "Exasol coding challenge"
+description = "Protocol and proof-of-work implementation for the Exasol POW coding challenge"
 authors = ["Fred Morcos <fm@fredmorcos.com>"]
 license = "GPL-3.0-only"
-# homepage = "https://github.com/fredmorcos/exasol"
-# repository = "https://github.com/fredmorcos/exasol"
+homepage = "https://github.com/fredmorcos/exasol-pow-challenge"
+repository = "https://github.com/fredmorcos/exasol-pow-challenge"
 readme = "README.md"
 keywords = ["exasol", "pow", "challenge", "hash", "random-string"]
 categories = ["authentication", "command-line-utilities", "cryptography", "cryptography::cryptocurrencies", "network-programming"]
