@@ -150,8 +150,8 @@ pub(crate) fn pow(authdata: &str, difficulty: usize) -> Res<Option<Vec<u8>>> {
       debug!("Thread {}: Starting...", thread_idx);
 
       let base_hasher = &base_hasher;
-      let total_iters = total_iters.clone();
-      let stop = stop.clone();
+      let total_iters = Arc::clone(&total_iters);
+      let stop = Arc::clone(&stop);
       let pow_result = pow_result.clone();
 
       scope.spawn(move |_| {
