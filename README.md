@@ -1,10 +1,5 @@
 # `exasol`: Protocol and proof-of-work implementation for the Exasol POW coding challenge
 
-[![License](https://img.shields.io/github/license/fredmorcos/exasol-pow-challenge?style=for-the-badge)](https://github.com/fredmorcos/exasol-pow-challenge/blob/main/LICENSE)
-[![Release (latest SemVer)](https://img.shields.io/github/v/release/fredmorcos/exasol-pow-challenge?sort=semver&style=for-the-badge)](https://github.com/fredmorcos/exasol-pow-challenge/releases)
-[![Release](https://img.shields.io/github/workflow/status/fredmorcos/exasol-pow-challenge/Release?label=Release&style=for-the-badge)](https://github.com/fredmorcos/exasol-pow-challenge/releases)
-[![CI](https://img.shields.io/github/workflow/status/fredmorcos/exasol-pow-challenge/CI?label=Master&style=for-the-badge)](https://github.com/fredmorcos/exasol-pow-challenge/actions)
-
 [Github Repository](https://github.com/fredmorcos/exasol-pow-challenge)
 
 ## Building
