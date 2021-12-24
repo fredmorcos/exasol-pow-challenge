@@ -1,4 +1,4 @@
-# `exasol`: Protocol and proof-of-work implementation for the Exasol POW coding challenge
+# `exasol-pow-challenge`: Protocol and proof-of-work implementation for the Exasol POW coding challenge
 
 [Github Repository](https://github.com/fredmorcos/exasol-pow-challenge)
 
