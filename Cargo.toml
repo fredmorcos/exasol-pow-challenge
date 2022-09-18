@@ -23,7 +23,7 @@ path = "src/main.rs"
 stats = []
 
 [dependencies]
-env_logger = "0.8"
+env_logger = "0.9"
 log = "0.4"
 structopt = "0.3"
 derive_more = "0.99"
@@ -35,9 +35,9 @@ rand = "0.8"
 rand_xoshiro = "0.6"
 sha-1 = "0.9"
 hex = "0.4"
-parking_lot = "0.11"
+parking_lot = "0.12"
 rayon = "1.5"
-either = "1.6"
+either = "1.8"
 chrono = { version = "0.4", features = ["serde"] }
 
 [profile.release]
